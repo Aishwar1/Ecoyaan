@@ -2,6 +2,7 @@ import Stepper from "../components/Stepper";
 import CartItem from "../components/CartItem";
 import OrderSummary from "../components/OrderSummary";
 import data from "../data/mockData.json";
+ 
 
 export default function Page() {
   const cart = data || { cartItems: [] };

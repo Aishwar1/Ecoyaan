@@ -4,7 +4,7 @@ import OrderSummary from "../components/OrderSummary";
 import data from "../data/mockData.json";
 
 export default function Page() {
-  const cart = data;
+  const cart = data || { cartItems: [] };
 
   return (
     <div className="max-w-6xl mx-auto px-4 py-6">
@@ -14,16 +14,16 @@ export default function Page() {
 
       <div className="grid md:grid-cols-3 gap-6">
         <div className="md:col-span-2 space-y-4">
-          {cart.cartItems.length > 0 ? (
+          {Array.isArray(cart.cartItems) ? (
             cart.cartItems.map((item) => (
               <CartItem key={item.product_id} item={item} />
             ))
           ) : (
-            <p className="text-gray-500">Your cart is empty.</p>
+            <p>No items found</p>
           )}
         </div>
 
-        <div className="bg-white p-6 rounded-2xl shadow-md border h-fit">
+        <div className="bg-white p-6 rounded-2xl shadow-md border">
           <OrderSummary cart={cart} />
         </div>
       </div>

@@ -3,9 +3,7 @@ import CartItem from "../components/CartItem";
 import OrderSummary from "../components/OrderSummary";
 
 async function getCart() {
-  const res = await fetch("http://localhost:3000/api/cart", {
-    cache: "no-store",
-  });
+  const res = await fetch("/api/cart", { cache: "no-store" })
   return res.json();
 }
 

@@ -1,7 +1,7 @@
-const config = {
-  plugins: {
-    "@tailwindcss/postcss": {},
+const nextConfig = {
+  experimental: {
+    turbo: false, // 🔥 disable turbopack (important)
   },
 };
 
-export default config;
+export default nextConfig;

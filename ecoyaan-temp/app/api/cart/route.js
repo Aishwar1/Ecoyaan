@@ -1,4 +1,4 @@
-import data from "@/data/mockData.json";
+import data from "../data/mockData.json";
 
 export const dynamic = "force-dynamic";
 

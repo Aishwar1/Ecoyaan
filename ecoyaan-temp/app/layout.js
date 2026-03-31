@@ -1,4 +1,4 @@
-import "./globals.css";
+import "../styles/globals.css";
 import { AddressProvider } from "../context/AddressContext";
 import Header from "../components/Header";
 import StickyFooter from "../components/StickyFooter";
